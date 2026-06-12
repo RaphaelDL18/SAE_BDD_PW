@@ -1,6 +1,4 @@
--- =============================================
--- INSERT Ingredients
--- =============================================
+
 
 -- Légumes
 INSERT INTO Ingredient (nom) VALUES ('Tomate');
@@ -79,3 +77,25 @@ INSERT INTO Ingredient (nom) VALUES ('Levure chimique');
 INSERT INTO Ingredient (nom) VALUES ('Vanille');
 INSERT INTO Ingredient (nom) VALUES ('Miel');
 INSERT INTO Ingredient (nom) VALUES ('Confiture');
+
+-- Fruits
+INSERT INTO Ingredient (nom) VALUES ('Citron');
+INSERT INTO Ingredient (nom) VALUES ('Orange');
+INSERT INTO Ingredient (nom) VALUES ('Pomme');
+INSERT INTO Ingredient (nom) VALUES ('Banane');
+INSERT INTO Ingredient (nom) VALUES ('Fraise');
+INSERT INTO Ingredient (nom) VALUES ('Framboise');
+INSERT INTO Ingredient (nom) VALUES ('Mangue');
+INSERT INTO Ingredient (nom) VALUES ('Ananas');
+INSERT INTO Ingredient (nom) VALUES ('Poire');
+INSERT INTO Ingredient (nom) VALUES ('Pêche');
+
+-- Fruits secs
+INSERT INTO Ingredient (nom) VALUES ('Amandes');
+INSERT INTO Ingredient (nom) VALUES ('Noix');
+INSERT INTO Ingredient (nom) VALUES ('Noisettes');
+INSERT INTO Ingredient (nom) VALUES ('Pistaches');
+INSERT INTO Ingredient (nom) VALUES ('Noix de cajou');
+INSERT INTO Ingredient (nom) VALUES ('Raisins secs');
+INSERT INTO Ingredient (nom) VALUES ('Dattes');
+INSERT INTO Ingredient (nom) VALUES ('Abricots secs');
