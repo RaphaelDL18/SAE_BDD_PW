@@ -38,6 +38,33 @@ $stmt = $pdo->prepare('
 ');
 $stmt->execute([$id]);
 $ingredients = $stmt->fetchAll();
+
+// Traitement du formulaire d'avis (si soumis)
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['note'])) {
+    if (!isset($_SESSION['u_id'])) {
+        header('Location: auth.php');
+        exit;
+    }
+    $note = (int)$_POST['note'];
+    $commentaire = trim($_POST['commentaire']);
+    $stmt = $pdo->prepare('INSERT INTO Avis (u_id, r_id, note, commentaire, datepost) VALUES (?, ?, ?, ?, NOW())');
+    $stmt->execute([$_SESSION['u_id'], $id, $note, $commentaire]);
+    header('Location: detail.php?id=' . $id);
+    exit;
+}
+
+// Récupérer les avis de cette recette
+$stmt = $pdo->prepare('
+    SELECT a.*, p.pseudo
+    FROM Avis a
+    LEFT JOIN Profil p ON a.u_id = p.u_id
+    WHERE a.r_id = ?
+    ORDER BY a.datepost DESC
+');
+$stmt->execute([$id]);
+$avis = $stmt->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -78,6 +105,35 @@ $ingredients = $stmt->fetchAll();
             <li><?= htmlspecialchars($etape['descript']) ?></li>
         <?php endforeach; ?>
     </ol>
+    <h3>Avis (<?= count($avis) ?>)</h3>
+
+<?php if (isset($_SESSION['u_id'])) : ?>
+    <form method="POST" action="detail.php?id=<?= $id ?>" class="mb-4">
+        <div class="mb-2">
+            <label>Note :</label>
+            <select name="note" class="form-control" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Très bien</option>
+                <option value="3">3 - Bien</option>
+                <option value="2">2 - Moyen</option>
+                <option value="1">1 - Décevant</option>
+            </select>
+        </div>
+        <div class="mb-2">
+            <textarea name="commentaire" class="form-control" placeholder="Votre commentaire" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Publier mon avis</button>
+    </form>
+<?php else : ?>
+    <p><a href="auth.php">Connectez-vous</a> pour laisser un avis.</p>
+<?php endif; ?>
+
+<?php foreach ($avis as $a) : ?>
+    <div class="border-bottom mb-2 pb-2">
+        <strong><?= htmlspecialchars($a['pseudo'] ?? 'Anonyme') ?></strong> — ⭐ <?= $a['note'] ?>/5
+        <p><?= htmlspecialchars($a['commentaire']) ?></p>
+    </div>
+<?php endforeach; ?>
 
 </div>
 </body>
