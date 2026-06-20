@@ -1,6 +1,5 @@
 -- Utilisateur de test
-INSERT INTO Utilisateur (email, mdp) VALUES ('delacroixlanglaisraphael@gmail.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
-
+INSERT INTO Utilisateur (email, mdp) VALUES ('test@test.fr', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
 -- Profil associé
 INSERT INTO Profil (u_id, nom, prenom, pseudo) VALUES (1, 'Delacroix-Langlais', 'Raphaël', 'Xx_Etchebest_xX');
 
