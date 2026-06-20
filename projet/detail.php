@@ -48,6 +48,7 @@ $ingredients = $stmt->fetchAll();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+    <?php require_once 'includes/navbar.php'; ?>
 <div class="container mt-4">
 
     <a href="liste.php" class="btn btn-secondary mb-3">← Retour à la liste</a>

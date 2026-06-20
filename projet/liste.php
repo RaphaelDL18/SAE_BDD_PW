@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'includes/connexion.php';
 $stmt = $pdo->query('SELECT r_id, titre, diff, nb_prsn FROM Recette');
 $recettes = $stmt->fetchAll();
@@ -11,6 +12,7 @@ $recettes = $stmt->fetchAll();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+    <?php require_once 'includes/navbar.php'; ?>
 <div class="container mt-4">
     <h1>Nos recettes</h1>
     <div class="row">
