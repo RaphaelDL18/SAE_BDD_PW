@@ -1,7 +1,26 @@
 <?php
 session_start();
 require_once 'includes/connexion.php';
-$stmt = $pdo->query('SELECT r_id, titre, diff, nb_prsn FROM Recette');
+
+// Récupérer les catégories pour le menu déroulant
+$categories = $pdo->query('SELECT * FROM Categorie')->fetchAll();
+
+// Construction de la requête dynamique
+$sql = 'SELECT r_id, titre, diff, nb_prsn FROM Recette WHERE 1=1';
+$params = [];
+
+if (!empty($_GET['recherche'])) {
+    $sql .= ' AND titre LIKE ?';
+    $params[] = '%' . $_GET['recherche'] . '%';
+}
+
+if (!empty($_GET['categorie'])) {
+    $sql .= ' AND c_id = ?';
+    $params[] = $_GET['categorie'];
+}
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute($params);
 $recettes = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
@@ -14,6 +33,24 @@ $recettes = $stmt->fetchAll();
 <body>
     <?php require_once 'includes/navbar.php'; ?>
 <div class="container mt-4">
+    <form method="GET" action="liste.php" class="row mb-4">
+    <div class="col-md-6">
+        <input type="text" name="recherche" class="form-control" placeholder="Rechercher une recette..." value="<?= htmlspecialchars($_GET['recherche'] ?? '') ?>">
+    </div>
+    <div class="col-md-4">
+        <select name="categorie" class="form-control">
+            <option value="">Toutes les catégories</option>
+            <?php foreach ($categories as $cat) : ?>
+                <option value="<?= $cat['c_id'] ?>" <?= (isset($_GET['categorie']) && $_GET['categorie'] == $cat['c_id']) ? 'selected' : '' ?>>
+                    <?= htmlspecialchars($cat['nom']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Filtrer</button>
+    </div>
+</form>
     <h1>Nos recettes</h1>
     <div class="row">
         <?php foreach ($recettes as $recette) : ?>
