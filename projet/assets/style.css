@@ -1,0 +1,74 @@
+body {
+    background-color: #FFF8F0;
+    color: #3D2B1F;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #8B4513 !important;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h1, h2, h3 {
+    color: #8B4513;
+    font-weight: 700;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.2);
+}
+
+.card-title {
+    color: #D9622B;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #D9622B;
+    border-color: #D9622B;
+}
+
+.btn-primary:hover {
+    background-color: #B84F1F;
+    border-color: #B84F1F;
+}
+
+.btn-success {
+    background-color: #F4A261;
+    border-color: #F4A261;
+    color: #3D2B1F;
+}
+
+.btn-success:hover {
+    background-color: #E08E4D;
+    border-color: #E08E4D;
+}
+
+.form-control:focus {
+    border-color: #D9622B;
+    box-shadow: 0 0 0 0.2rem rgba(217, 98, 43, 0.2);
+}
+
+.alert-danger {
+    background-color: #FBEAE5;
+    border-color: #D9622B;
+    color: #8B4513;
+}
+
+.alert-success {
+    background-color: #FDF1E3;
+    border-color: #F4A261;
+    color: #8B4513;
+}
