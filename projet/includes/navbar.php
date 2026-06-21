@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
-        <a class="navbar-brand" href="index.php">🍳 Recettes</a>
+        <a class="navbar-brand" href="index.php">🍳 Lahmakoon - Recettes</a>
         <div class="ms-auto">
             <?php if (isset($_SESSION['u_id'])) : ?>
                 <span class="text-white me-3">Connecté : <?= htmlspecialchars($_SESSION['email']) ?></span>
