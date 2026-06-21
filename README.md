@@ -69,7 +69,9 @@ Système d'avis (note + commentaire) réservé aux utilisateurs connectés
 
 
 Raphaël — Schéma de la base de données, page d'accueil avec liste des recettes, recherche et filtre par catégorie, relecture transversale du code
+
 Babacar — Structure du projet, connexion PDO, page détail d'une recette, système d'avis, fonctionnalité d'ajout de recette, charte graphique
+
 Mohamed — Import des données (ingrédients et recettes), authentification (inscription/connexion), navigation et gestion de session, documentation
 
 
