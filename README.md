@@ -2,7 +2,7 @@ SAE BDD PW - Gestion de Recettes de Cuisine
 
 Description
 
-Application web de gestion de recettes de cuisine permettant aux utilisateurs de consulter des recettes, de les rechercher et de les filtrer par catégorie, et de poster des avis. L'ajout de recettes et d'ingrédients est géré manuellement en base de données par l'équipe projet.
+Application web de gestion de recettes de cuisine permettant aux utilisateurs de consulter des recettes, de les rechercher et de les filtrer par catégorie, de poster des avis, et d'ajouter leurs propres recettes une fois connectés. Les données de démonstration incluent une treizaine de recettes réparties sur plusieurs catégories.
 
 Stack technique
 
@@ -41,12 +41,12 @@ data.sql (données de démonstration : recettes, étapes, utilisateur de test)
 
 
 Placer le dossier du projet dans htdocs
-Accéder à l'application via : http://localhost/SAE_BDD_PW/projet/liste.php
+Accéder à l'application via : http://localhost/SAE_BDD_PW/projet/index.php
 
 
 Compte de test
 
-Pour tester les fonctionnalités nécessitant une connexion (poster un avis,déconnexion) :
+Pour tester les fonctionnalités nécessitant une connexion (poster un avis, déconnexion) :
 
 
 Email : test@test.fr
@@ -61,14 +61,15 @@ Recherche de recettes par titre
 Filtre des recettes par catégorie
 Consultation détaillée d'une recette (ingrédients, étapes)
 Inscription et connexion utilisateur
+Ajout d'une nouvelle recette (réservé aux utilisateurs connectés)
 Système d'avis (note + commentaire) réservé aux utilisateurs connectés
 
 
 Équipe
 
 
-Raphaël — Schéma de la base de données, page liste des recettes, recherche et filtre par catégorie
-Babacar — Structure du projet, connexion PDO, page détail d'une recette, système d'avis
+Raphaël — Schéma de la base de données, page d'accueil avec liste des recettes, recherche et filtre par catégorie, relecture transversale du code
+Babacar — Structure du projet, connexion PDO, page détail d'une recette, système d'avis, fonctionnalité d'ajout de recette, charte graphique
 Mohamed — Import des données (ingrédients et recettes), authentification (inscription/connexion), navigation et gestion de session, documentation
 
 
