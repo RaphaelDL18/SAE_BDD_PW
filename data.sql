@@ -73,3 +73,100 @@ INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (5, 3, 'Mélanger riz et cre
 INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (5, 34, 300, 'g');     -- Riz
 INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (5, 21, 300, 'g');     -- Crevettes
 INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (5, 3, 2, 'gousse');   -- Ail
+
+-- Recette 6 : Poulet au curry
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 1, 'Poulet au curry', 'Un plat parfumé et réconfortant.', 15, 25, 4, 2);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (6, 1, 'Couper le poulet en morceaux et le faire dorer.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (6, 2, 'Ajouter l\'oignon émincé et le curcuma, laisser revenir.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (6, 3, 'Verser le lait de coco et laisser mijoter 20 minutes.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (6, 16, 500, 'g');     -- Poulet
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (6, 2, 1, 'pièce');     -- Oignon
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (6, 39, 1, 'càc');      -- Curcuma
+
+-- Recette 7 : Omelette aux champignons
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 1, 'Omelette aux champignons', 'Simple, rapide, et délicieuse.', 5, 10, 2, 1);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (7, 1, 'Faire revenir les champignons émincés dans le beurre.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (7, 2, 'Battre les œufs et les verser dans la poêle.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (7, 3, 'Cuire à feu moyen et plier en deux avant de servir.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (7, 27, 4, 'pièce');    -- Oeuf
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (7, 12, 150, 'g');      -- Champignon
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (7, 24, 1, 'càs');      -- Beurre
+
+-- Recette 8 : Houmous de pois chiches
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 3, 'Houmous de pois chiches', 'Une recette orientale facile à préparer.', 10, 0, 4, 1);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (8, 1, 'Mixer les pois chiches avec l\'ail et le citron.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (8, 2, 'Ajouter l\'huile d\'olive petit à petit en mixant.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (8, 3, 'Assaisonner et servir frais.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (8, 37, 400, 'g');      -- Pois chiches
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (8, 3, 1, 'gousse');    -- Ail
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (8, 60, 1, 'pièce');    -- Citron
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (8, 51, 3, 'càs');      -- Huile d'olive
+
+-- Recette 9 : Gratin dauphinois
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 1, 'Gratin dauphinois', 'Un classique réconfortant de la cuisine française.', 20, 45, 6, 2);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (9, 1, 'Éplucher et couper les pommes de terre en fines rondelles.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (9, 2, 'Disposer en couches dans un plat avec la crème.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (9, 3, 'Cuire 45 minutes à 180°C jusqu\'à coloration.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (9, 9, 1, 'kg');        -- Pomme de terre
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (9, 23, 30, 'cl');      -- Crème fraîche
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (9, 26, 100, 'g');      -- Fromage râpé
+
+-- Recette 10 : Cookies au chocolat
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 2, 'Cookies au chocolat', 'Des cookies moelleux et gourmands.', 15, 12, 8, 1);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (10, 1, 'Mélanger le beurre, le sucre et l\'œuf.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (10, 2, 'Ajouter la farine, la levure et le chocolat en morceaux.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (10, 3, 'Former des boules et cuire 12 minutes à 180°C.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (10, 31, 200, 'g');     -- Farine
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (10, 24, 100, 'g');     -- Beurre
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (10, 56, 150, 'g');     -- Chocolat noir
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (10, 35, 1, 'càc');     -- Levure chimique
+
+-- Recette 11 : Smoothie banane-fraise
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 2, 'Smoothie banane-fraise', 'Frais, sucré, et rapide à préparer.', 5, 0, 2, 1);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (11, 1, 'Couper la banane et les fraises.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (11, 2, 'Mixer le tout avec le lait jusqu\'à consistance lisse.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (11, 67, 1, 'pièce');   -- Banane
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (11, 68, 150, 'g');     -- Fraise
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (11, 22, 20, 'cl');     -- Lait
+
+-- Recette 12 : Lentilles à l'indienne
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 4, 'Lentilles à l\'indienne', 'Un plat épicé et nourrissant.', 10, 25, 4, 2);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (12, 1, 'Faire revenir l\'oignon et l\'ail avec le cumin.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (12, 2, 'Ajouter les lentilles et couvrir d\'eau.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (12, 3, 'Laisser mijoter 25 minutes jusqu\'à cuisson complète.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (12, 36, 250, 'g');     -- Lentilles
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (12, 2, 1, 'pièce');    -- Oignon
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (12, 38, 1, 'càc');     -- Cumin
+
+-- Recette 13 : Salade de fruits
+INSERT INTO Recette (u_id, c_id, titre, descript, tps_prep, tps_cuis, nb_prsn, diff)
+VALUES (1, 2, 'Salade de fruits', 'Légère et parfaite en dessert.', 15, 0, 4, 1);
+
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (13, 1, 'Couper tous les fruits en morceaux.');
+INSERT INTO Etape (r_id, nb_ordre, descript) VALUES (13, 2, 'Mélanger avec un peu de jus de citron et de miel.');
+
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (13, 66, 2, 'pièce');   -- Orange
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (13, 67, 2, 'pièce');   -- Banane
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (13, 75, 1, 'pièce');   -- Mangue
+INSERT INTO Recette_Ingredient (r_id, i_id, quantite, unite) VALUES (13, 62, 1, 'càs');     -- Miel
