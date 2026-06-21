@@ -36,7 +36,7 @@
             {
                 $_SESSION['u_id'] = $user['u_id'];
                 $_SESSION['email'] = $user['email'];
-                header('Location: liste.php');
+                header('Location: index.php');
                 exit;
             }
             else 

@@ -6,7 +6,7 @@
     $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     if ($id === 0) 
     {
-        header('Location: liste.php');
+        header('Location: index.php');
         exit;
     }
 
@@ -23,7 +23,7 @@
 
     if (!$recette) 
     {
-        header('Location: liste.php');
+        header('Location: index.php');
         exit;
     }
 
@@ -86,7 +86,7 @@
     <?php require_once 'includes/navbar.php'; ?>
     <div class="container mt-4">
 
-        <a href="liste.php" class="btn btn-secondary mb-3">← Retour à la liste</a>
+        <a href="index.php" class="btn btn-secondary mb-3">← Retour à la liste</a>
 
         <h1><?= htmlspecialchars($recette['titre']) ?></h1>
         <p class="text-muted">Catégorie : <?= htmlspecialchars($recette['categorie'] ?? 'Non définie') ?></p>

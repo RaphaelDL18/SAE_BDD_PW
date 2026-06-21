@@ -242,7 +242,7 @@
 
             <div class="mt-4">
                 <button type="submit" class="btn btn-success">Publier la recette</button>
-                <a href="liste.php" class="btn btn-secondary">Annuler</a>
+                <a href="index.php" class="btn btn-secondary">Annuler</a>
             </div>
         </form>
     </div>
