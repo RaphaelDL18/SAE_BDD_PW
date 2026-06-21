@@ -7,6 +7,7 @@
         $action = $_POST['action'];
         $email = trim($_POST['email']);
         $mdp = $_POST['mdp'];
+        $pseudo = trim($_POST['pseudo'] ?? '');
 
         if ($action === 'inscription') 
         {
@@ -23,6 +24,11 @@
                 $hash = password_hash($mdp, PASSWORD_BCRYPT);
                 $stmt = $pdo->prepare('INSERT INTO Utilisateur (email, mdp) VALUES (?, ?)');
                 $stmt->execute([$email, $hash]);
+                $u_id = $pdo->lastInsertId();
+
+                $stmt = $pdo->prepare('INSERT INTO Profil (u_id, nom, prenom, pseudo) VALUES (?, ?, ?, ?)');
+                $stmt->execute([$u_id, '', '', $pseudo]);
+
                 $succes = "Compte créé ! Vous pouvez vous connecter.";
             }
         }
@@ -90,11 +96,13 @@
                 <input type="email" name="email" class="form-control" placeholder="Email" required>
             </div>
             <div class="mb-3">
+                <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required>
+            </div>
+            <div class="mb-3">
                 <input type="password" name="mdp" class="form-control" placeholder="Mot de passe" required>
             </div>
             <button type="submit" class="btn btn-success">Créer un compte</button>
         </form>
-
-    </div>
+    </div>   
 </body>
 </html>
